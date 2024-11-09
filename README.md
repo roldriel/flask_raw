@@ -1,6 +1,6 @@
 ![Pylint](https://github.com/roldriel/flask_raw/actions/workflows/pylint.yml/badge.svg)
 ![Flake8](https://github.com/roldriel/flask_raw/actions/workflows/flake8.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-0%25-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
 
 # 🚀 Boilerplates para Lenguajes de Programación
