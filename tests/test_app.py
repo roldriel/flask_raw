@@ -2,6 +2,7 @@
 import pytest
 from src.app import create_app
 
+
 @pytest.fixture
 def client():
     """Client test function"""
@@ -9,6 +10,7 @@ def client():
     app.config['TESTING'] = True
     with app.test_client() as test_client:
         yield test_client
+
 
 def test_home(client):  # pylint: disable=W0621
     """Test home endpoint"""
