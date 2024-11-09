@@ -1,3 +1,4 @@
+"""Tests endpoints module"""
 import pytest
 from src.app import create_app
 
@@ -9,8 +10,8 @@ def client():
     with app.test_client() as client:
         yield client
 
-def test_home(client):
+def test_home(test_client):
     """Test home endpoint"""
-    response = client.get('/')
+    response = test_client.get('/')
     assert response.status_code == 200
     assert b'Hello, World!!' in response.data
