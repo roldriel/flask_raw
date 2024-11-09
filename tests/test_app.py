@@ -7,10 +7,10 @@ def client():
     """Client test function"""
     app = create_app()
     app.config['TESTING'] = True
-    with app.test_client() as client:
-        yield client
+    with app.test_client() as test_client:
+        yield test_client
 
-def test_home(client):  # Renamed parameter from 'test_client' to 'client'
+def test_home(client):  # pylint: disable=W0621
     """Test home endpoint"""
     response = client.get('/')
     assert response.status_code == 200
