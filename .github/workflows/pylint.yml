@@ -1,6 +1,10 @@
 name: Pylint
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Flake8"]
+    types:
+      - completed
 
 jobs:
   build:
