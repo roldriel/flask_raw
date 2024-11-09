@@ -10,8 +10,8 @@ def client():
     with app.test_client() as client:
         yield client
 
-def test_home(test_client):
+def test_home(client):  # Renamed parameter from 'test_client' to 'client'
     """Test home endpoint"""
-    response = test_client.get('/')
+    response = client.get('/')
     assert response.status_code == 200
     assert b'Hello, World!!' in response.data
